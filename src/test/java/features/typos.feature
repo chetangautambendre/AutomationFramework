@@ -1,0 +1,1 @@
+Feature: verify typos page
