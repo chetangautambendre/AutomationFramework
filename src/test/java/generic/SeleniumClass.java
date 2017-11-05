@@ -48,7 +48,7 @@ public class SeleniumClass {
 	}
 	
 	public void navigateBack() {
-		
+		driver.navigate().back();
 	}
 	
 	public void performAction() {
