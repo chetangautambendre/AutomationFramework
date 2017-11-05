@@ -18,5 +18,16 @@ public class SeleniumClass {
 	public void navigateBack() {
 		
 	}
-
+	
+	public void performAction() {
+		
+	}
+	
+	public void identifyElement() {
+		
+	}
+	
+	public void identifyElements() {
+		
+	}
 }
