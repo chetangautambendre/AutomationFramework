@@ -7,13 +7,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
-<<<<<<< HEAD
-//import selenium.AutoClass.locatorType;
 
-public class SeleniumClass {
-=======
+
 public class SeleniumClass { 
->>>>>>> 3ab1d00333311cfd2ab5c70f66fbe0e5483dd1b7
+
 	
 	WebDriver driver;
 	public enum locatorType {id, name, className, tagName,css,xpath,linkText, partialLinkText};
@@ -53,6 +50,8 @@ public class SeleniumClass {
 	}
 	
 	public void verifyPageByURL(String expectedURL) {
+		
+		String ActualUrl=driver.getCurrentUrl();
 		
 	}
 	
