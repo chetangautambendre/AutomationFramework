@@ -7,10 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
-
-
 public class SeleniumClass { 
-
 	
 	WebDriver driver;
 	public enum locatorType {id, name, className, tagName,css,xpath,linkText, partialLinkText};
