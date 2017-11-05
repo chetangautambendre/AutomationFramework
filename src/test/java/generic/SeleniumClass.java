@@ -40,6 +40,7 @@ public class SeleniumClass {
 	
 	public void launchApplication(String url) {
 		
+		driver.get(url);
 	}
 	
 	public void verifyPageByURL(String expectedURL) {
