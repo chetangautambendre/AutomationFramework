@@ -22,4 +22,12 @@ public class SeleniumClass {
 	public void performAction() {
 		
 	}
+	
+	public void identifyElement() {
+		
+	}
+	
+	public void identifyElements() {
+		
+	}
 }
