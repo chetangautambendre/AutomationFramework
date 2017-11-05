@@ -18,5 +18,9 @@ public class SeleniumClass {
 	public void navigateBack() {
 		
 	}
+	
+	public void performAction() {
+		
+	}
 
 }
