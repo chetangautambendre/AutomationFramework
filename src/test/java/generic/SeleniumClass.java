@@ -22,5 +22,4 @@ public class SeleniumClass {
 	public void performAction() {
 		
 	}
-
 }
