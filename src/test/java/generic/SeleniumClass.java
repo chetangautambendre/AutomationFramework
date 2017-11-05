@@ -51,7 +51,7 @@ public class SeleniumClass {
 	
 	public void verifyPageByURL(String expectedURL) {
 		
-		String ActualUrl=driver.getCurrentUrl();
+		String actualUrl=driver.getCurrentUrl();
 		
 	}
 	
