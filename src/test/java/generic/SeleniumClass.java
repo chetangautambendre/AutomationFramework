@@ -1,14 +1,19 @@
 package generic;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
+//import selenium.AutoClass.locatorType;
+
 public class SeleniumClass {
 	
 	WebDriver driver;
-	
+	public enum locatorType {id, name, className, tagName,css,xpath,linkText, partialLinkText};
+	public WebElement element;
 	public void launchBrowser(String browserName)  {
 		
 		String currentPath = System.getProperty("user.dir");
@@ -58,7 +63,33 @@ public class SeleniumClass {
 		
 	}
 	
-	public void identifyElements() {
+	public WebElement identifyElements(String LocatorValue, locatorType type) {
+		
+		WebElement element = null;
+		switch(type) {
+				case id : element = driver.findElement(By.id(LocatorValue));
+					break;
+				case name : element = driver.findElement(By.name(LocatorValue));
+				        break;
+				case className : element = driver.findElement(By.className(LocatorValue));
+					break;
+				case tagName : element = driver.findElement(By.tagName(LocatorValue));
+					break;
+				case css : element = driver.findElement(By.cssSelector(LocatorValue));
+					break;
+				case xpath : element = driver.findElement(By.xpath(LocatorValue));
+					break;
+				case linkText : element = driver.findElement(By.linkText(LocatorValue));
+					break;
+				case partialLinkText : element = driver.findElement(By.partialLinkText(LocatorValue));
+					break;
+			
+				}
+		
+		return element;
 		
 	}
+	
+	
+	
 }
