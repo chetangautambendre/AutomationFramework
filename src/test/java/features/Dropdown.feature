@@ -2,11 +2,11 @@ Feature: dropdown feature
 
 @dd
 Scenario: To verify the drowndown option present on the home page 
-
 Given "chrome" browser is selected
-Then "https://the-internet.herokuapp.com/" is launched
-Then verify "https://the-internet.herokuapp.com/" is launched
-When "Dropdown" link is clicked
-Then verify "https://the-internet.herokuapp.com/dropdown" is launched
-
-Then click on dropdown option
+Then launch url "https://the-internet.herokuapp.com/"
+And verify page by url "https://the-internet.herokuapp.com/"
+Then click on "Dropdown"
+And verify page by url "https://the-internet.herokuapp.com/dropdown"
+Then select "1" by "index"
+Then select "Option 1" by "text"
+Then select "2" by "value"

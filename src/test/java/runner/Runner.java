@@ -11,7 +11,7 @@ import cucumber.api.junit.Cucumber;
 			glue = "stepdef",
 			monochrome=true,
 			dryRun = false,
-			tags = {"@smoke"}
+			tags = {"@cb"}
 			
 		)
 public class Runner {

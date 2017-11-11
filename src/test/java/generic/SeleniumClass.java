@@ -6,10 +6,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.support.ui.Select;
 
 public class SeleniumClass { 
 	
-	WebDriver driver;
+	static WebDriver driver;
 	public enum locatorType {id, name, className, tagName,css,xpath,linkText, partialLinkText};
 	public WebElement element;
 	public void launchBrowser(String browserName)  {
@@ -56,7 +57,24 @@ public class SeleniumClass {
 		driver.navigate().back();
 	}
 	
-	public void performAction() {
+	public void performAction(WebElement elem, String actionType, String value) {
+		
+		if(actionType.equalsIgnoreCase("index") || actionType.equalsIgnoreCase("text")||actionType.equalsIgnoreCase("value")) {
+			Select sel = new Select(elem);
+			
+			if(actionType.equalsIgnoreCase("index")) {
+				sel.selectByIndex(Integer.parseInt(value));
+			}
+			else if(actionType.equalsIgnoreCase("text")) {
+				sel.selectByVisibleText(value);
+			}
+			else if(actionType.equalsIgnoreCase("value")) {
+				sel.selectByValue(value);
+			}		
+		}
+		else if(actionType.equalsIgnoreCase("click")) {
+			elem.click();
+		}
 		
 	}
 	
