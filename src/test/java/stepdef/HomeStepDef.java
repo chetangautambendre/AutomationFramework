@@ -8,6 +8,7 @@ public class HomeStepDef {
 	
 	HomePage hp = new HomePage();
 	
+	
 	@Given("^\"([^\"]*)\" browser is selected$")
 	public void browser_is_selected(String arg1) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions

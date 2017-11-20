@@ -1,6 +1,12 @@
 package generic;
 
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -8,11 +14,32 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class SeleniumClass { 
+public abstract class SeleniumClass extends BaseClass{ 
 	
 	static WebDriver driver;
 	public enum locatorType {id, name, className, tagName,css,xpath,linkText, partialLinkText};
 	public WebElement element;
+	
+	public void getScreenShot()
+	{
+	    String currentPath = System.getProperty("user.dir");
+		
+		currentPath = currentPath + "\\src\\test\\java\\utils\\";
+			
+		File scrFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		
+		try {
+			FileUtils.copyFile(scrFile,new File(currentPath +"screenShot.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+   
+		
+		
+	}
 	public void launchBrowser(String browserName)  {
 		
 		String currentPath = System.getProperty("user.dir");
@@ -107,6 +134,11 @@ public class SeleniumClass {
 		
 		return element;
 		
+	}
+	
+	public void CloseApplication()
+	{
+		driver.close();
 	}
 	
 	
