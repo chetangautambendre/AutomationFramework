@@ -1,4 +1,4 @@
-Feature: dropdown feature
+Feature: CheckBox feature
 
 @cb
 Scenario: To verify the drowndown option present on the home page 
