@@ -1,6 +1,6 @@
 Feature: dropdown feature
 
-@dd
+@cb
 Scenario: To verify the drowndown option present on the home page 
 Given "chrome" browser is selected
 Then launch url "https://the-internet.herokuapp.com/"

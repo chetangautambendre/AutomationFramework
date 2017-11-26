@@ -7,7 +7,7 @@ Then verify "https://the-internet.herokuapp.com/" is launched
 When "Form Authentication" link is clicked
 Then verify "https://the-internet.herokuapp.com/login" is launched
 
-@correct
+@cb
 Scenario: with correct credentials
 Then pass username as "tomsmith"
 And pass password"SuperSecretPassword!"
